@@ -1,0 +1,64 @@
+<div class="mainbar">
+    <div class="matter">
+        <div class="container-fluid">
+            <div class="isotope" style="position: relative; overflow: hidden;" id="portfolio-one">
+                <div style="color: #000000;">
+                    <div class="row">	
+                         <!-- Alignment -->
+                        <div class="col-sm-offset-1 col-sm-6">
+                            <div class="tab-content">
+                                <p>
+                                <div class="tab-pane active" id="tab_a">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">Editar Registro de Activo Fijo
+                                            <div style="float: right;"><a href="javascript:void(0);" style="color: black;" onclick="popupCssHide()"><i class="icon-remove"></i></a></div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <form class="controls">
+                                            <div class="control-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Codigo: <label id='idActivo'> [id]</label></span>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Nombre del  Activo</span>
+                                                </div>
+                                                <input type="text" value="[nombre]" id="nomEditActivo" class="form-control" id="nomActivo" placeholder="Nombre del Activo Fijo" required  autofocus />
+                                                <div id="activoEE" style="display: none;" class="alert alert-danger"></div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Stock del Activo</span> 
+                                                </div>
+                                                <input type="tel" value="[stock]" id="stockEditActivo" class="form-control" id="stockActivo" onkeypress="return soloNumeros(event);" placeholder="Stock" />
+                                                <div id="stockEE" style="display: none;" class="alert alert-danger"></div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Categoria del Activo</span> 
+                                                </div>    
+                                                <div id="refres">
+                                                    <select class="form-control" id="categEditActivo">
+                                                        <option value="s">--seleccione--</option>
+                                                        [categoriaedit]
+                                                    </select>
+                                                    <div id="categoriaEE" style="display: none;" class="alert alert-danger"></div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Detalle del Activo</span> 
+                                                </div>   
+                                                <textarea class="form-control" id="detEditActivo" rows="3" placeholder="Detalle del Activo Fijo">[detalle]</textarea>
+                                                
+                                            </div><p>
+                                                <div id="MensajeS" style="display: none;" class="alert alert-success"></div>
+                                            <div id="success"> </div> <!-- For success/fail messages -->
+
+                                            <input type="button" value="Guardar" class="btn btn-large btn-primary pull-right" onclick="editarActivo();"/>
+                                            </form>
+                                        </div>
+                                    </div> 
+                                </div>
+
+                            </div><!-- tab content -->                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+</div>

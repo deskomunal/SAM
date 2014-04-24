@@ -8,7 +8,7 @@ body{
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 23px;
-	background:#818181;
+	background:#F0EBEB;
 	color: #fff;	
 }
 
@@ -127,7 +127,8 @@ color:#fff;
    filter: none !important;
    border-left: 0px !important;
    border-right: 0px !important;
-   background: #FF3738;
+   background: #135D9F;
+   /*background: linear-gradient(to bottom, #135D9F, ‪#‎FB9C1C‬);*/
    border-bottom: 1px dashed #fff;
 }
 
@@ -1149,5 +1150,3 @@ footer{
 
 @media (max-width: 979px){
 }
-
-

@@ -96,9 +96,8 @@ class index
         
         //controla la session
 	if($_SESSION['logeado'] == 1){
-            if($_SESSION['tipo'] == 0){
                 $template->SetParameter('pagina',$this ->PaginaSesion());
-            }//else {$template->SetParameter('navegacion',$this->showNavVenta());}
+            //else {$template->SetParameter('navegacion',$this->showNavVenta());}
 		//$template->SetParameter('usuario','<div><h3><label>Usuario: '.$_SESSION['nomlogin'].'</label></h3></div>');
         }else{
             $template->SetParameter('pagina',$this ->Pagina());

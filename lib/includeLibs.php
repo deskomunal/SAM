@@ -6,6 +6,7 @@ class includeLibs{
     try {
         $parm = parse_ini_file("../conf/connect.ini");
                             $url1 = $parm["01"];
+                            $url2 = $parm["01.1"];
                             $user = $parm["02"];
                             $pass = $parm["03"];
                             $db   = $parm["04"];
@@ -38,15 +39,13 @@ class includeLibs{
     
     switch($_SERVER['HTTP_HOST'])
     {
-	case 'localhost':
+	case 'www.samsoft.bl.ee':
 		$_cfg['host'] = $url1;
 		$_cfg['user'] = $user;
 		$_cfg['pass'] = $pass;
 		$_cfg['db'] = $db;
 		break;
 	default:
-		ini_set("session.cache_expire","180");
-		ini_set("session.gc_maxlifetime","3600");
 		$_cfg['host'] = $url2;
 		$_cfg['user'] = $user;
 		$_cfg['pass'] = $pass;

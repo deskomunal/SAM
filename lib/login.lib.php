@@ -5,23 +5,28 @@ class login
   {
     $query = new query;
     $pass = md5($password);
-    $row = $query->getRows("login,password,iduser","usuario");
-    foreach($row as $key){
-      if ($key['login'] == $login)
-      	if ($key['password'] == $pass)
+    $row = $query->getRows("select u.iduser,u.login,u.password,u.estado from usuario u where estado='1'");
+    foreach($row as $key)
+    {
+        if ($key['login'] == $login){  
+            if ($key['password'] == $pass){
       		return $key['iduser'];
+            }
+            return 'f1';
+        }
     }
-    return "false";
+    return 'f2';
   }
   
 	function loginUser($user_id)
 	{
-		$query = new query;
-		$row = $query->getRow("iduser,login,password,tipo","usuario","WHERE iduser = $user_id");
-		$_SESSION['logeado'] = 1;
-		$_SESSION['nombre'] = $row['login'];
-		$_SESSION['idusuario'] = $row['iduser'];
-		$_SESSION['tipo'] = $row['tipo'];
+            session_start();
+            $query = new query;
+            $row = $query->getRow("select u.iduser,u.login,u.password,u.estado from usuario u where u.iduser ='$user_id'");
+            
+            $_SESSION['logeado'] = 1;
+            $_SESSION['iduser'] = $row['iduser'];
+            $_SESSION['login'] = $row['login'];
 	}
 
 }
